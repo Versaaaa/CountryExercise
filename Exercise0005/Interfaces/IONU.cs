@@ -4,5 +4,6 @@
     {
         void PopulationControl();
         void TerritorialControl();
+
     }
 }

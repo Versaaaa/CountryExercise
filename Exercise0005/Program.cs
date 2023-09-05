@@ -10,15 +10,33 @@ namespace Exercise0005
         {
 
             List<AbsCountry> list = new List<AbsCountry>{ new DeathPenaltyCountry("Nord Korea"), new EuZoneCountry("Hungary"), new EuroZoneCountry("Italy") };
+            
+            Random rand = new Random();
 
             foreach (var i in list)
             {
                 Console.WriteLine(i.Name);
+                i.Population = rand.Next(101);
+                Console.WriteLine($"Numero Popolazione : {i.Population}");
                 i.Organization();
                 CourtOfHumanRights.Judge(i);
+                ResidencePermit.Permit(i);
                 EuroCentralBank.Spread(i);
                 Console.WriteLine();
             }
+            Console.WriteLine($"Numero Popolazione EuroZona : {EuroZoneCountry.euroZonePopulation}");
+            Console.WriteLine();
+
+            EuroZoneCountry country = new EuroZoneCountry("Germany");
+            country.Population = 30;
+            Console.WriteLine($"Numero Popolazione Germania: {country.Population}");
+            Console.WriteLine($"Numero Popolazione EuroZona : {EuroZoneCountry.euroZonePopulation}");
+            Console.WriteLine();
+            
+            country.Population = 10;
+            Console.WriteLine($"Numero Popolazione Germania: {country.Population}");
+            Console.WriteLine($"Numero Popolazione EuroZona : {EuroZoneCountry.euroZonePopulation}");
+
         }
     }
 

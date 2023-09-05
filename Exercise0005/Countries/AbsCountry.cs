@@ -3,9 +3,14 @@ using Exercise0005.Interfaces;
 
 namespace Exercise0005.Countries
 {
-    public abstract class AbsCountry : IONU
+    public abstract class AbsCountry : PoliticalEntity,IONU 
     {
-        public int Population { get; set; }
+        protected int _population = 0;
+        public virtual int Population 
+        {
+            get { return _population; }
+            set { _population = value; }
+        }
         public string Coin { get; set; }
         public string Government { get; set; }
 

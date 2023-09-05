@@ -6,6 +6,20 @@ namespace Exercise0005.Countries
 {
     public class EuroZoneCountry : EuZoneCountry, IEuroZone
     {
+        public static int euroZonePopulation = 0;
+
+        public Action residencePermitAction;
+
+        public override int Population
+        {
+            get { return _population; }
+            set
+            {
+                int x = value - _population;
+                _population = value;
+                euroZonePopulation += x;
+            }
+        }
         public int Spread { get { return EuroCentralBank.Spread(this); } }
         public int Debt { get; set; }
 
@@ -18,7 +32,7 @@ namespace Exercise0005.Countries
         {
             ApplyEuro();
         }
-
+        
         public void ApplyEuro()
         {
             Coin = "Euro";
