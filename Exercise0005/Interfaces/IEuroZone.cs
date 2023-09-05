@@ -1,4 +1,4 @@
-﻿namespace Exercise0005
+﻿namespace Exercise0005.Interfaces
 {
     public interface IEuroZone
     {

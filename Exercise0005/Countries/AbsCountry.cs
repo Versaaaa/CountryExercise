@@ -1,6 +1,7 @@
 ﻿using System;
+using Exercise0005.Interfaces;
 
-namespace Exercise0005
+namespace Exercise0005.Countries
 {
     public abstract class AbsCountry : IONU
     {

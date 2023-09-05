@@ -1,6 +1,6 @@
-﻿namespace Exercise0005
+﻿namespace Exercise0005.Interfaces
 {
-    public interface IONU 
+    public interface IONU
     {
         void PopulationControl();
         void TerritorialControl();

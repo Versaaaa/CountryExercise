@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
+using Exercise0005.Interfaces;
 
-namespace Exercise0005
+namespace Exercise0005.Countries
 {
     public class EuroZoneCountry : EuZoneCountry, IEuroZone
     {
