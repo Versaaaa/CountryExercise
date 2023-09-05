@@ -10,12 +10,12 @@ namespace Exercise0005
             try
             {
                 country = (DeathPenaltyCountry)country;
-                Console.WriteLine($"Il paese {country.Name} non rispetta i diritti umani");
+                Console.WriteLine($"Il paese non rispetta i diritti umani");
                 return true;
             }
             catch
             {
-                Console.WriteLine($"Il paese {country.Name} rispetta i diritti umani");
+                Console.WriteLine($"Il paese rispetta i diritti umani");
                 return false;
             }
         }

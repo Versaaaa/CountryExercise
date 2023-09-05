@@ -13,21 +13,11 @@ namespace Exercise0005
 
             foreach (var i in list)
             {
-                Console.WriteLine($"{CourtOfHumanRights.Judge(i)}");   
-            }
-
-            Console.WriteLine();
-
-            foreach (var i in list)
-            {
-                Console.WriteLine($"{EuroCentralBank.Spread(i)}");   
-            }
-
-            Console.WriteLine();
-
-            foreach (var i in list)
-            {
+                Console.WriteLine(i.Name);
                 i.Organization();
+                CourtOfHumanRights.Judge(i);
+                EuroCentralBank.Spread(i);
+                Console.WriteLine();
             }
         }
     }

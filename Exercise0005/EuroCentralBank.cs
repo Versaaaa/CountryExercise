@@ -11,10 +11,15 @@ namespace Exercise0005
             {
                 country = (EuroZoneCountry)country;
                 Random rng = new Random();
-                return rng.Next();
+                int spread = rng.Next();
+
+                Console.WriteLine($"Lo spread del paese equivale a {spread}");
+
+                return spread;
             }
             catch
             {
+                Console.WriteLine("La Banca Centrale Europea non può calcolare lo spread del paese");
                 return 0;
             }
         }
